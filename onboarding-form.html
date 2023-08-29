@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OneBill Utilities Limited</title>
+
+    <!-- Bootstrap CDN -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+
+    <!-- font awesome cdn link -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    />
+
+    <!-- swiper slider CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
+
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Poppins:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar fixed-top navbar-expand-lg bg-light-subtle">
+        <div class="container-fluid ps-lg-5 pe-lg-5">
+          <a class="navbar-brand" href="index.html">
+            <img src="images/onebill-logo.png" alt="OneBill Logo" height="45" />
+          </a>
+          <button
+            class="navbar-toggler border-0"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"> </span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mb-2 ms-lg-auto mb-lg-0 gap-2">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="index.html"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">About Us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">How It Works</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">FAQs</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Contact Us</a>
+              </li>
+
+              <li class="nav-item gap-5">
+                <a
+                  class="btn btn-success"
+                  href="https://demo.onebill.ie/public/customer-signup?customer_count=2"
+                  >Sign Up</a
+                >
+                <a
+                  class="btn btn-outline-success"
+                  href="https://demo.onebill.ie/public/portal/login"
+                  >Login</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="estimate-form">
+      <section class="form-container">
+        <div class="container-fluid">
+          <div class="row justify-content-center">
+            <div
+              class="col-11 col-sm-10 col-md-10 col-lg-6 col-xl-5 text-center p-0 mt-3 mb-2"
+            >
+              <div class="card px-0 pb-0 mb-3">
+                <h3 class="text-success">
+                  Discover Your Potential Savings with OneBill
+                </h3>
+                <form id="msform">
+                  <!-- progressbar -->
+                  <ul id="progressbar" class="ps-0">
+                    <li class="active" id="electricity">
+                      <small>Electricity</small>
+                    </li>
+                    <li id="gas"><small>Gas</small></li>
+                    <li id="broadband"><small>Broadband</small></li>
+                    <li id="estimate"><small>Estimate</small></li>
+                  </ul>
+                  <div class="progress">
+                    <div
+                      class="progress-bar progress-bar-striped progress-bar-animated"
+                      role="progressbar"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                    ></div>
+                  </div>
+                  <br />
+                  <!-- fieldsets -->
+                  <fieldset>
+                    <div class="form-card">
+                      <div class="row">
+                        <div class="col-7">
+                          <h5 class="text-primary-emphasis">
+                            Electricity Details:
+                          </h5>
+                        </div>
+                        <div class="col-5">
+                          <h6 class="text-secondary steps">Step 1 - 4</h6>
+                        </div>
+                      </div>
+
+                      <div class="form-floating">
+                        <select
+                          name="provider"
+                          id="electricity-provider"
+                          class="form-select mb-2"
+                          aria-label="Floating label select example"
+                        >
+                          <option value="1">Electric Ireland</option>
+                          <option value="2">Bord Gáis Energy</option>
+                          <option value="3">SSE Airtricity</option>
+                          <option value="4">Energia</option>
+                          <option value="5">Community Power</option>
+                          <option value="6">Ecopower</option>
+                          <option value="7">Waterpower</option>
+                          <option value="8">Flogas</option>
+                          <option value="9">Glowpower</option>
+                          <option value="10">Other</option>
+                        </select>
+
+                        <label for="provider"> <small>Provider: </small></label>
+                      </div>
+
+                      <div class="d-flex gap-2 w-100">
+                        <div class="form-floating w-50">
+                          <input
+                            type="text"
+                            name="mprn"
+                            placeholder="MPRN"
+                            class="form-control"
+                          />
+                          <label class="fieldlabels"
+                            ><small>MPRN:</small></label
+                          >
+                        </div>
+                        <div class="form-floating w-50">
+                          <input
+                            type="number"
+                            name="accountNumber"
+                            placeholder="Account Number"
+                            class="form-control"
+                          />
+                          <label class="fieldlabels"
+                            ><small>Account Number:</small></label
+                          >
+                        </div>
+                      </div>
+
+                      <div class="d-flex gap-2 w-100">
+                        <!-- Payment Method -->
+                        <div class="w-50 form-floating">
+                          <select
+                            id="electricity-payment"
+                            name="electricity-payment"
+                            class="form-select mb-2"
+                          >
+                            <option value="weekly">Weekly</option>
+                            <option value="fortnightly">Fortnightly</option>
+                            <option value="monthly">Monthly</option>
+                          </select>
+                          <label for="electricity-payment"
+                            ><small>Payment Cycle:</small></label
+                          >
+                        </div>
+
+                        <!-- Payment Amount -->
+                        <div class="form-floating w-50">
+                          <input
+                            class="form-control"
+                            type="number"
+                            id="electricity-payment-amount"
+                            name="electricity-payment-amount"
+                            placeholder="Payment Amount"
+                          />
+                          <label
+                            for="electricity-payment-amount"
+                            class="fieldlabels"
+                          >
+                            <small>Amount (€):</small>
+                          </label>
+                        </div>
+                      </div>
+
+                      <div class="form-floating w-100">
+                        <input
+                          class="form-control"
+                          type="number"
+                          id="electricity-usage"
+                          name="electricity-usage"
+                          placeholder="Annual Usage"
+                        />
+                        <label for="electricity-usage" class="fieldlabels"
+                          ><small>Annual Usage (kWh):</small></label
+                        >
+                      </div>
+
+                      <div
+                        class="d-flex gap-lg-5 gap-3 mt-3 mb-3 border rounded-2 p-3 align-items-start justify-content-start"
+                      >
+                        <p class="mb-0">Are you in a contract?</p>
+
+                        <div
+                          class="d-flex gap-3 gap-lg-5 align-items-center justify-content-between"
+                        >
+                          <div class="form-check mb-0">
+                            <input
+                              class="form-check-input"
+                              type="radio"
+                              name="electricity-contract"
+                              id="electricity-contract-yes"
+                              checked
+                            />
+                            <label
+                              class="form-check-label"
+                              for="electricity-contract-yes"
+                            >
+                              Yes
+                            </label>
+                          </div>
+                          <div class="form-check mb-0">
+                            <input
+                              class="form-check-input"
+                              type="radio"
+                              name="electricity-contract"
+                              id="electricity-contract-no"
+                            />
+                            <label
+                              class="form-check-label"
+                              for="electricity-contract-no"
+                            >
+                              No
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div>
+                        <label class="fieldlabels" class="form-label" for="bill"
+                          >Upload Bill:</label
+                        >
+                        <input class="form-control" type="file" name="bill" />
+                      </div>
+                    </div>
+                    <input
+                      type="button"
+                      name="next"
+                      class="next action-button btn btn-success px-5 py-2"
+                      value="Next"
+                    />
+                  </fieldset>
+                  <fieldset>
+                    <div class="form-card">
+                      <div class="row">
+                        <div class="col-7">
+                          <h5 class="text-primary-emphasis">Gas Details:</h5>
+                        </div>
+                        <div class="col-5">
+                          <h6 class="text-secondary steps">Step 2 - 4</h6>
+                        </div>
+                      </div>
+                      <div class="form-floating">
+                        <select
+                          name="provider"
+                          id="gas-provider"
+                          class="form-select mb-2"
+                          aria-label="Floating label select example"
+                        >
+                          <option value="1">Electric Ireland</option>
+                          <option value="2">Bord Gáis Energy</option>
+                          <option value="3">SSE Airtricity</option>
+                          <option value="4">Energia</option>
+                          <option value="5">Flogas</option>
+                          <option value="6">Other</option>
+                        </select>
+
+                        <label for="provider"> <small>Provider: </small></label>
+                      </div>
+
+                      <div class="d-flex gap-2 w-100">
+                        <div class="form-floating w-50">
+                          <input
+                            type="text"
+                            name="gprn"
+                            placeholder="gprn"
+                            class="form-control"
+                          />
+                          <label class="fieldlabels"
+                            ><small>GPRN:</small></label
+                          >
+                        </div>
+
+                        <div class="form-floating w-50">
+                          <input
+                            type="number"
+                            name="accountNumber"
+                            placeholder="Account Number"
+                            class="form-control"
+                          />
+                          <label class="fieldlabels"
+                            ><small>Account Number:</small></label
+                          >
+                        </div>
+                      </div>
+
+                      <div class="d-flex gap-2 w-100">
+                        <!-- Payment Method -->
+                        <div class="w-50 form-floating">
+                          <select
+                            id="gas-payment"
+                            name="gas-payment"
+                            class="form-select mb-2"
+                          >
+                            <option value="weekly">Weekly</option>
+                            <option value="fortnightly">Fortnightly</option>
+                            <option value="monthly">Monthly</option>
+                          </select>
+                          <label for="gas-payment"
+                            ><small>Payment Cycle:</small></label
+                          >
+                        </div>
+
+                        <!-- Payment Amount -->
+                        <div class="form-floating w-50">
+                          <input
+                            class="form-control"
+                            type="number"
+                            id="gas-payment-amount"
+                            name="gas-payment-amount"
+                            placeholder="Payment Amount"
+                          />
+                          <label for="gas-payment-amount" class="fieldlabels">
+                            <small>Amount (€):</small>
+                          </label>
+                        </div>
+                      </div>
+
+                      <div class="form-floating w-100">
+                        <input
+                          class="form-control"
+                          type="number"
+                          id="gas-usage"
+                          name="gas-usage"
+                          placeholder="Annual Gas Usage"
+                        />
+                        <label for="gas-usage" class="fieldlabels">
+                          <small>Annual Usage (kWh):</small>
+                        </label>
+                      </div>
+
+                      <div
+                        class="d-flex gap-lg-5 gap-3 mt-3 mb-3 border rounded-2 p-3 align-items-start justify-content-start"
+                      >
+                        <label>Are you in a contract?</label>
+
+                        <div
+                          class="d-flex gap-3 gap-lg-5 align-items-center justify-content-between"
+                        >
+                          <div class="form-check mb-0">
+                            <input
+                              class="form-check-input"
+                              type="radio"
+                              name="gas-contract"
+                              id="gas-contract-yes"
+                              checked
+                            />
+                            <label
+                              class="form-check-label"
+                              for="gas-contract-yes"
+                            >
+                              Yes
+                            </label>
+                          </div>
+                          <div class="form-check mb-0">
+                            <input
+                              class="form-check-input"
+                              type="radio"
+                              name="gas-contract"
+                              id="gas-contract-no"
+                            />
+                            <label
+                              class="form-check-label"
+                              for="gas-contract-no"
+                            >
+                              No
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                      <div>
+                        <label class="fieldlabels" class="form-label" for="bill"
+                          >Upload Bill:</label
+                        >
+                        <input class="form-control" type="file" name="bill" />
+                      </div>
+                    </div>
+                    <input
+                      type="button"
+                      name="next"
+                      class="next action-button btn btn-success px-5 py-2"
+                      value="Next"
+                    />
+                    <input
+                      type="button"
+                      name="previous"
+                      class="previous action-button-previous btn btn-outline-success px-4 py-2"
+                      value="Back"
+                    />
+                  </fieldset>
+                  <fieldset>
+                    <div class="form-card">
+                      <div class="row">
+                        <div class="col-7">
+                          <h5 class="text-primary-emphasis">
+                            Broadband Details:
+                          </h5>
+                        </div>
+                        <div class="col-5">
+                          <h6 class="text-secondary steps">Step 3 - 4</h6>
+                        </div>
+                      </div>
+
+                      <div class="form-floating">
+                        <select
+                          name="provider"
+                          id="broadband-provider"
+                          class="form-select mb-2"
+                          aria-label="Floating label select example"
+                        >
+                          <option value="1">Eir</option>
+                          <option value="2">Vodafone</option>
+                          <option value="3">Digiweb</option>
+                          <option value="4">Pure Telecom</option>
+                          <option value="5">Sky</option>
+                          <option value="6">Virgin Media</option>
+                          <option value="7">Magnet</option>
+                          <option value="8">Regional Broadband</option>
+                          <option value="9">Other</option>
+                        </select>
+
+                        <label for="provider"> <small>Provider: </small></label>
+                      </div>
+
+                      <div class="d-flex gap-2 w-100">
+                        <div class="form-floating w-50">
+                          <input
+                            type="text"
+                            name="broadbandName"
+                            placeholder="broadbandName"
+                            class="form-control"
+                          />
+                          <label class="fieldlabels"
+                            ><small>Plan Name:</small></label
+                          >
+                        </div>
+
+                        <div class="form-floating w-50">
+                          <input
+                            type="text"
+                            name="broadbandAccountNumber"
+                            placeholder="Account Number"
+                            class="form-control"
+                          />
+                          <label class="fieldlabels"
+                            ><small>Account Number:</small></label
+                          >
+                        </div>
+                      </div>
+
+                      <div class="d-flex gap-2 w-100">
+                        <!-- Payment Method -->
+                        <div class="w-50 form-floating">
+                          <select
+                            id="broadband-payment"
+                            name="broadband-payment"
+                            class="form-select mb-2"
+                          >
+                            <option value="weekly">Weekly</option>
+                            <option value="fortnightly">Fortnightly</option>
+                            <option value="monthly">Monthly</option>
+                          </select>
+                          <label for="broadband-payment" class="fieldlabels"
+                            ><small>Payment Cycle:</small></label
+                          >
+                        </div>
+
+                        <!-- Payment Amount -->
+                        <div class="form-floating w-50">
+                          <input
+                            class="form-control"
+                            type="number"
+                            id="broadband-payment-amount"
+                            name="broadband-payment-amount"
+                            placeholder="Payment Amount"
+                          />
+                          <label
+                            for="broadband-payment-amount"
+                            class="fieldlabels"
+                            ><small>Amount (€):</small></label
+                          >
+                        </div>
+                      </div>
+
+                      <div
+                        class="d-flex gap-lg-5 gap-3 mt-3 mb-3 border rounded-2 p-3 align-items-start justify-content-start"
+                      >
+                        <label>Are you in a contract?</label>
+
+                        <div
+                          class="d-flex gap-3 gap-lg-5 align-items-center justify-content-between"
+                        >
+                          <div class="form-check mb-0">
+                            <input
+                              class="form-check-input"
+                              type="radio"
+                              name="broadband-contract"
+                              id="broadband-contract-yes"
+                              checked
+                            />
+                            <label
+                              class="form-check-label"
+                              for="broadband-contract-yes"
+                            >
+                              Yes
+                            </label>
+                          </div>
+                          <div class="form-check mb-0">
+                            <input
+                              class="form-check-input"
+                              type="radio"
+                              name="broadband-contract"
+                              id="broadband-contract-no"
+                            />
+                            <label
+                              class="form-check-label"
+                              for="broadband-contract-no"
+                            >
+                              No
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div>
+                        <label class="fieldlabels" class="form-label" for="bill"
+                          >Upload Bill:</label
+                        >
+                        <input class="form-control" type="file" name="bill" />
+                      </div>
+                    </div>
+                    <input
+                      type="button"
+                      name="next"
+                      class="next action-button btn btn-success px-5 py-2"
+                      value="Next"
+                    />
+                    <input
+                      type="button"
+                      name="previous"
+                      class="previous action-button-previous btn btn-outline-success px-4 py-2"
+                      value="Back"
+                    />
+                  </fieldset>
+                  <fieldset>
+                    <div class="form-card">
+                      <div class="row">
+                        <div class="col-7">
+                          <h5>Estimate:</h5>
+                        </div>
+                        <div class="col-5">
+                          <h6 class="text-secondary steps">Step 4 - 4</h6>
+                        </div>
+                      </div>
+
+                      <div class="row justify-content-center"></div>
+                      <br /><br />
+                      <div class="row justify-content-center mb-5">
+                        <div class="col-7 text-center">
+                          <h5 class="text-center text-primary-emphasis">
+                            Based on the information you have provided, we
+                            estimate that you could save up to:
+                          </h5>
+
+                          <h1 class="text-center text-success">
+                            <strong>€ 400</strong
+                            ><small class="text-secondary"> per month</small>
+                          </h1>
+                        </div>
+                      </div>
+
+                      <input
+                        type="button"
+                        name="submit"
+                        class="submit action-button btn btn-success px-5 py-2 w-100"
+                        value="Join OneBill"
+                      />
+                      <input
+                        type="button"
+                        name="previous"
+                        class="previous action-button-previous btn btn-outline-success px-4 py-2"
+                        value="Previous"
+                      />
+                      <input
+                        type="button"
+                        name="reset"
+                        class="reset action-button btn btn-outline-secondary border-0 btn-sm py-2 mx-3"
+                        value="Start Again"
+                      />
+                    </div>
+                  </fieldset>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="bg-body-tertiary p-4 p-lg-5">
+      <a href="index.html"
+        ><img
+          src="images/onebill-logo.png"
+          alt="OneBill Logo"
+          class="img-fluid w-25 mb-2"
+      /></a>
+
+      <p class="text-secondary">
+        <small>© 2023, OneBill Utilities Ltd</small>
+      </p>
+
+      <div class="d-flex gap-2">
+        <a href="https://twitter.com/OneBill_Ireland">
+          <i
+            class="fa-brands fa-twitter text-success p-3 rounded-2 bg-body-secondary"
+          >
+          </i>
+        </a>
+        <a href="https://www.instagram.com/onebill_utilities">
+          <i
+            class="fa-brands fa-instagram text-success p-3 rounded-2 bg-body-secondary"
+          ></i>
+        </a>
+        <a href="https://www.linkedin.com/company/onebillutilities/">
+          <i
+            class="fa-brands fa-linkedin-in text-success p-3 rounded-2 bg-body-secondary"
+          ></i>
+        </a>
+        <a href="https://wa.me/353858007335">
+          <i
+            class="fa-brands fa-whatsapp text-success p-3 rounded-2 bg-body-secondary"
+          ></i>
+        </a>
+      </div>
+
+      <div class="d-flex justify-content-between mb-4 mt-4 pe-lg-5">
+        <div class="d-flex flex-column gap-2">
+          <a href="#" class="text-decoration-none text-success">Home</a>
+          <a href="#" class="text-decoration-none text-success">About Us</a>
+          <a href="#" class="text-decoration-none text-success">How It Works</a>
+          <a href="#" class="text-decoration-none text-success">FAQs</a>
+          <a href="#" class="text-decoration-none text-success">Contact Us</a>
+        </div>
+        <div class="d-flex flex-column gap-2">
+          <a href="#" class="text-decoration-none text-secondary">
+            <small>Terms & Conditions</small>
+          </a>
+          <a href="#" class="text-decoration-none text-secondary">
+            <small>Privacy Policy</small>
+          </a>
+          <a href="#" class="text-decoration-none text-secondary">
+            <small>Cookie Policy</small>
+          </a>
+        </div>
+      </div>
+      <p class="text-secondary">
+        <small>
+          OneBill Utilities Ltd is a registered company in Ireland (Company
+          Number: 123456). Registered Office: 123 Fake Street, Dublin 1,
+          Ireland.
+        </small>
+      </p>
+
+      <p class="text-secondary">
+        <small> CRO: 658186 </small>
+      </p>
+    </footer>
+
+    <!-- Bootstrap JS Link -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://code.jquery.com/jquery-3.7.0.js"
+      integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="index.js"></script>
+  </body>
+</html>
