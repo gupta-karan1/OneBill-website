@@ -9,6 +9,7 @@
 body {
   font-family: "Poppins", sans-serif;
   padding-top: 5.5rem;
+  max-width: 1500px;
 }
 
 .hero {
@@ -76,7 +77,8 @@ body {
 #msform .action-button {
   /* width: 100px; */
   /* background: #198754; */
-  font-weight: bold;
+  /* font-weight: bold; */
+  font-family: "Poppins", sans-serif;
   /* color: white; */
   /* border: 0 none; */
   /* border-radius: 0px; */
@@ -94,7 +96,8 @@ body {
 #msform .action-button-previous {
   /* width: 100px; */
   /* background: #616161; */
-  font-weight: bold;
+  /* font-weight: bold; */
+  font-family: "Poppins", sans-serif;
   /* color: white; */
   /* border: 0 none; */
   /* border-radius: 0px; */
@@ -231,7 +234,7 @@ body {
 
   .onboarding-form {
     height: 85vh;
-    width: 60vw;
+    width: 50vw;
   }
 
   .priceCard {

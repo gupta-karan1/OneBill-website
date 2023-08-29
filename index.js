@@ -1,6 +1,7 @@
 $(document).ready(function () {
   // Store the input email and eircode on the home page in local storage
-  $("#estimateStart").click(function () {
+  $("#estimateForm").submit(function (event) {
+    event.preventDefault(); // Prevent the form from submitting
     // Get the values from the input fields
     var address = $("#address").val();
     var email = $("#InputEmail1").val();
