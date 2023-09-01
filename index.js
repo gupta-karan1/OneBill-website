@@ -25,7 +25,7 @@ $(document).ready(function () {
   $(form).submit(function (event) {
     event.preventDefault(); // Prevent the form from submitting
 
-    let eircode = $("#eir-code").val();
+    let eircode = $("#eir-code").val() || "";
     let inputData = {
       eircode: eircode,
     };
@@ -36,7 +36,7 @@ $(document).ready(function () {
   });
 
   // set the value of the eircode in the form to the value stored in local storage
-  let eircode = JSON.parse(localStorage.getItem("eircode"));
+  let eircode = JSON.parse(localStorage.getItem("eircode")) || "";
   $("#user-eircode").val(eircode.eircode);
 
   // $(form2).submit(function (event) {
