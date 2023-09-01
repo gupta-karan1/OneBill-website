@@ -218,6 +218,7 @@ $(document).ready(function () {
         filesProcessed++;
         if (filesProcessed === fileCount) {
           submitForm(formData);
+          window.location.href = "onboarding-form.html";
         }
       }
     });
