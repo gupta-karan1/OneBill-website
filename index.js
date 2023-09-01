@@ -218,7 +218,6 @@ $(document).ready(function () {
         filesProcessed++;
         if (filesProcessed === fileCount) {
           submitForm(formData);
-          window.location.href = "onboarding-form.html";
         }
       }
     });
@@ -236,6 +235,10 @@ $(document).ready(function () {
         } else {
           alert("Error submitting form: " + data.error);
         }
+      })
+      .then(() => {
+        // reload window
+        window.location.href = "onboarding-form.html";
       })
       .catch((error) => console.error("Error!", error.message));
   }
