@@ -3,7 +3,18 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>OneBill Utilities Limited</title>
+    <title>Onboarding Form | OneBill Utilities</title>
+
+    <!-- Meta tags for SEO -->
+    <meta
+      name="description"
+      content="Start your journey with OneBill Utilities. Complete the onboarding form to simplify your utility bills, manage different providers, and estimate potential savings."
+    />
+    <meta
+      name="keywords"
+      content="OneBill Utilities, onboarding form, utility bill management, estimate savings"
+    />
+    <meta name="author" content="OneBill" />
 
     <!-- Bootstrap CDN -->
     <link
@@ -62,16 +73,16 @@
                 >
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">About Us</a>
+                <a class="nav-link" href="about-us.html">About Us</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="how-it-works.html">How It Works</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">FAQs</a>
+                <a class="nav-link" href="faqs.html">FAQs</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Contact Us</a>
+                <a class="nav-link" href="contact-us.html">Contact Us</a>
               </li>
 
               <li class="nav-item gap-5">
@@ -103,7 +114,12 @@
                 <h3 class="text-success">
                   Discover Your Potential Savings with OneBill
                 </h3>
-                <form id="msform">
+                <form
+                  id="msform"
+                  method="post"
+                  name="msform"
+                  action="https://script.google.com/macros/s/AKfycbxdy2m1Leo4yEnN4UeYOkENLLn0MMBrrk8QJG7CY_xvTx7knAp467DuVbzZhrghLFsH/exec"
+                >
                   <!-- progressbar -->
                   <ul id="progressbar" class="ps-0">
                     <li class="active" id="electricity">
@@ -138,87 +154,35 @@
 
                       <div class="form-floating">
                         <select
-                          name="provider"
+                          name="electricity-provider"
                           id="electricity-provider"
                           class="form-select mb-2"
                           aria-label="Floating label select example"
                         >
-                          <option value="1">Electric Ireland</option>
-                          <option value="2">Bord Gáis Energy</option>
-                          <option value="3">SSE Airtricity</option>
-                          <option value="4">Energia</option>
-                          <option value="5">Community Power</option>
-                          <option value="6">Ecopower</option>
-                          <option value="7">Waterpower</option>
-                          <option value="8">Flogas</option>
-                          <option value="9">Glowpower</option>
-                          <option value="10">Other</option>
+                          <option value="Electric Ireland">
+                            Electric Ireland
+                          </option>
+                          <option value="Bord Gáis Energy">
+                            Bord Gáis Energy
+                          </option>
+                          <option value="SSE Airtricity">SSE Airtricity</option>
+                          <option value="Energia">Energia</option>
+                          <option value="Community Power">
+                            Community Power
+                          </option>
+                          <option value="Ecopower">Ecopower</option>
+                          <option value="Waterpower">Waterpower</option>
+                          <option value="Flogas">Flogas</option>
+                          <option value="Glowpower">Glowpower</option>
+                          <option value="Other">Other</option>
                         </select>
 
-                        <label for="provider"> <small>Provider: </small></label>
+                        <label for="electricity-provider">
+                          <small>Provider: </small></label
+                        >
                       </div>
 
-                      <!-- <div class="d-flex gap-2 w-100">
-                        <div class="form-floating w-50">
-                          <input
-                            type="text"
-                            name="mprn"
-                            placeholder="MPRN"
-                            class="form-control"
-                          />
-                          <label class="fieldlabels"
-                            ><small>MPRN:</small></label
-                          >
-                        </div>
-                        <div class="form-floating w-50">
-                          <input
-                            type="number"
-                            name="accountNumber"
-                            placeholder="Account Number"
-                            class="form-control"
-                          />
-                          <label class="fieldlabels"
-                            ><small>Account Number:</small></label
-                          >
-                        </div>
-                      </div> -->
-
-                      <!-- <div class="d-flex gap-2 w-100">
-
-                        <div class="w-50 form-floating">
-                          <select
-                            id="electricity-payment"
-                            name="electricity-payment"
-                            class="form-select mb-2"
-                          >
-                            <option value="weekly">Weekly</option>
-                            <option value="fortnightly">Fortnightly</option>
-                            <option value="monthly">Monthly</option>
-                          </select>
-                          <label for="electricity-payment"
-                            ><small>Payment Cycle:</small></label
-                          >
-                        </div>
-
-
-                        <div class="form-floating w-50">
-                          <input
-                            class="form-control"
-                            type="number"
-                            id="electricity-payment-amount"
-                            name="electricity-payment-amount"
-                            placeholder="Payment Amount"
-                          />
-                          <label
-                            for="electricity-payment-amount"
-                            class="fieldlabels"
-                          >
-                            <small>Amount (€):</small>
-                          </label>
-                        </div>
-                      </div> -->
-
-                      <div class="form-floating w-100">
+                      <!-- <div class="form-floating w-100">
                         <input
                           class="form-control"
                           type="number"
@@ -229,7 +193,7 @@
                         <label for="electricity-usage" class="fieldlabels"
                           ><small>Annual Usage (kWh):</small></label
                         >
-                      </div>
+                      </div> -->
 
                       <div
                         class="d-flex gap-lg-5 gap-3 mt-3 mb-3 border rounded-2 p-3 align-items-start justify-content-start"
@@ -246,6 +210,7 @@
                               name="electricity-contract"
                               id="electricity-contract-yes"
                               checked
+                              value="yes"
                             />
                             <label
                               class="form-check-label"
@@ -260,6 +225,7 @@
                               type="radio"
                               name="electricity-contract"
                               id="electricity-contract-no"
+                              value="no"
                             />
                             <label
                               class="form-check-label"
@@ -272,10 +238,51 @@
                       </div>
 
                       <div>
-                        <label class="fieldlabels" class="form-label" for="bill"
-                          >Upload Bill:</label
+                        <label
+                          class="fieldlabels"
+                          class="form-label"
+                          for="electricity-bill-file"
+                          >Upload/Scan Bill:</label
                         >
-                        <input class="form-control" type="file" name="bill" />
+                        <input
+                          class="form-control"
+                          type="file"
+                          name="electricity-bill-file"
+                          id="electricity-bill-file"
+                        />
+                      </div>
+                      <div>
+                        <label
+                          class="fieldlabels"
+                          class="form-label"
+                          for="electricity-meter-file"
+                          >Upload/Scan Meter Reading:</label
+                        >
+                        <input
+                          class="form-control"
+                          type="file"
+                          name="electricity-meter-file"
+                          id="electricity-meter-file"
+                        />
+                      </div>
+
+                      <div class="form-check">
+                        <input
+                          type="checkbox"
+                          class="form-check-input border-success"
+                          id="electricity-meter-available"
+                          name="electricity-meter-available"
+                          value="not available"
+                        />
+                        <label
+                          class="form-check-label text-success-emphasis"
+                          for="electricity-meter-available"
+                        >
+                          <small>
+                            I don't have meter readings because I've just moved
+                            in.
+                          </small>
+                        </label>
                       </div>
                     </div>
                     <input
@@ -297,89 +304,26 @@
                       </div>
                       <div class="form-floating">
                         <select
-                          name="provider"
+                          name="gas-provider"
                           id="gas-provider"
                           class="form-select mb-2"
                           aria-label="Floating label select example"
                         >
-                          <option value="1">Electric Ireland</option>
-                          <option value="2">Bord Gáis Energy</option>
-                          <option value="3">SSE Airtricity</option>
-                          <option value="4">Energia</option>
-                          <option value="5">Flogas</option>
-                          <option value="6">Other</option>
+                          <option value="Electric Ireland">
+                            Electric Ireland
+                          </option>
+                          <option value="Bord Gáis Energy">
+                            Bord Gáis Energy
+                          </option>
+                          <option value="SSE Airtricity">SSE Airtricity</option>
+                          <option value="Energia">Energia</option>
+                          <option value="Flogas">Flogas</option>
+                          <option value="Other">Other</option>
                         </select>
 
-                        <label for="provider"> <small>Provider: </small></label>
-                      </div>
-
-                      <!-- <div class="d-flex gap-2 w-100">
-                        <div class="form-floating w-50">
-                          <input
-                            type="text"
-                            name="gprn"
-                            placeholder="gprn"
-                            class="form-control"
-                          />
-                          <label class="fieldlabels"
-                            ><small>GPRN:</small></label
-                          >
-                        </div>
-
-                        <div class="form-floating w-50">
-                          <input
-                            type="number"
-                            name="accountNumber"
-                            placeholder="Account Number"
-                            class="form-control"
-                          />
-                          <label class="fieldlabels"
-                            ><small>Account Number:</small></label
-                          >
-                        </div>
-                      </div> -->
-
-                      <!-- <div class="d-flex gap-2 w-100">
-                        <div class="w-50 form-floating">
-                          <select
-                            id="gas-payment"
-                            name="gas-payment"
-                            class="form-select mb-2"
-                          >
-                            <option value="weekly">Weekly</option>
-                            <option value="fortnightly">Fortnightly</option>
-                            <option value="monthly">Monthly</option>
-                          </select>
-                          <label for="gas-payment"
-                            ><small>Payment Cycle:</small></label
-                          >
-                        </div>
-
-                        <div class="form-floating w-50">
-                          <input
-                            class="form-control"
-                            type="number"
-                            id="gas-payment-amount"
-                            name="gas-payment-amount"
-                            placeholder="Payment Amount"
-                          />
-                          <label for="gas-payment-amount" class="fieldlabels">
-                            <small>Amount (€):</small>
-                          </label>
-                        </div>
-                      </div> -->
-
-                      <div class="form-floating w-100">
-                        <input
-                          class="form-control"
-                          type="number"
-                          id="gas-usage"
-                          name="gas-usage"
-                          placeholder="Annual Gas Usage"
-                        />
-                        <label for="gas-usage" class="fieldlabels">
-                          <small>Annual Usage (kWh):</small>
-                        </label>
+                        <label for="gas-provider">
+                          <small>Provider: </small></label
+                        >
                       </div>
 
                       <div
@@ -397,6 +341,7 @@
                               name="gas-contract"
                               id="gas-contract-yes"
                               checked
+                              value="yes"
                             />
                             <label
                               class="form-check-label"
@@ -411,6 +356,7 @@
                               type="radio"
                               name="gas-contract"
                               id="gas-contract-no"
+                              value="no"
                             />
                             <label
                               class="form-check-label"
@@ -422,10 +368,51 @@
                         </div>
                       </div>
                       <div>
-                        <label class="fieldlabels" class="form-label" for="bill"
-                          >Upload Bill:</label
+                        <label
+                          class="fieldlabels"
+                          class="form-label"
+                          for="gas-bill-file"
+                          >Upload/Scan Bill:</label
                         >
-                        <input class="form-control" type="file" name="bill" />
+                        <input
+                          class="form-control"
+                          type="file"
+                          name="gas-bill-file"
+                          id="gas-bill-file"
+                        />
+                      </div>
+                      <div>
+                        <label
+                          class="fieldlabels"
+                          class="form-label"
+                          for="gas-meter-file"
+                          >Upload/Scan Meter Reading:</label
+                        >
+                        <input
+                          class="form-control"
+                          type="file"
+                          name="gas-meter-file"
+                          id="gas-meter-file"
+                        />
+                      </div>
+
+                      <div class="form-check">
+                        <input
+                          type="checkbox"
+                          class="form-check-input border-success"
+                          id="gas-meter-available"
+                          name="gas-meter-available"
+                          value="not available"
+                        />
+                        <label
+                          class="form-check-label text-success-emphasis"
+                          for="gas-meter-available"
+                        >
+                          <small>
+                            I don't have meter readings because I've just moved
+                            in.
+                          </small>
+                        </label>
                       </div>
                     </div>
                     <input
@@ -456,20 +443,22 @@
 
                       <div class="form-floating">
                         <select
-                          name="provider"
+                          name="broadband-provider"
                           id="broadband-provider"
                           class="form-select mb-2"
                           aria-label="Floating label select example"
                         >
-                          <option value="1">Eir</option>
-                          <option value="2">Vodafone</option>
-                          <option value="3">Digiweb</option>
-                          <option value="4">Pure Telecom</option>
-                          <option value="5">Sky</option>
-                          <option value="6">Virgin Media</option>
-                          <option value="7">Magnet</option>
-                          <option value="8">Regional Broadband</option>
-                          <option value="9">Other</option>
+                          <option value="Eir">Eir</option>
+                          <option value="Vodafone">Vodafone</option>
+                          <option value="Digiweb">Digiweb</option>
+                          <option value="Pure Telecom">Pure Telecom</option>
+                          <option value="Sky">Sky</option>
+                          <option value="Virgin Media">Virgin Media</option>
+                          <option value="Magnet">Magnet</option>
+                          <option value="Regional Broadband">
+                            Regional Broadband
+                          </option>
+                          <option value="Other">Other</option>
                         </select>
 
                         <label for="provider"> <small>Provider: </small></label>
@@ -485,63 +474,6 @@
                           ><small>Plan Name:</small></label
                         >
                       </div>
-                      <!-- <div class="d-flex gap-2 w-100">
-                        <div class="form-floating w-50">
-                          <input
-                            type="text"
-                            name="broadbandName"
-                            placeholder="broadbandName"
-                            class="form-control"
-                          />
-                          <label class="fieldlabels"
-                            ><small>Plan Name:</small></label
-                          >
-                        </div>
-
-                        <div class="form-floating w-50">
-                          <input
-                            type="text"
-                            name="broadbandAccountNumber"
-                            placeholder="Account Number"
-                            class="form-control"
-                          />
-                          <label class="fieldlabels"
-                            ><small>Account Number:</small></label
-                          >
-                        </div>
-                      </div> -->
-
-                      <!-- <div class="d-flex gap-2 w-100">
-                        <div class="w-50 form-floating">
-                          <select
-                            id="broadband-payment"
-                            name="broadband-payment"
-                            class="form-select mb-2"
-                          >
-                            <option value="weekly">Weekly</option>
-                            <option value="fortnightly">Fortnightly</option>
-                            <option value="monthly">Monthly</option>
-                          </select>
-                          <label for="broadband-payment" class="fieldlabels"
-                            ><small>Payment Cycle:</small></label
-                          >
-                        </div>
-
-                        <div class="form-floating w-50">
-                          <input
-                            class="form-control"
-                            type="number"
-                            id="broadband-payment-amount"
-                            name="broadband-payment-amount"
-                            placeholder="Payment Amount"
-                          />
-                          <label
-                            for="broadband-payment-amount"
-                            class="fieldlabels"
-                            ><small>Amount (€):</small></label
-                          >
-                        </div>
-                      </div> -->
 
                       <div
                         class="d-flex gap-lg-5 gap-3 mt-3 mb-3 border rounded-2 p-3 align-items-start justify-content-start"
@@ -558,6 +490,7 @@
                               name="broadband-contract"
                               id="broadband-contract-yes"
                               checked
+                              value="yes"
                             />
                             <label
                               class="form-check-label"
@@ -572,6 +505,7 @@
                               type="radio"
                               name="broadband-contract"
                               id="broadband-contract-no"
+                              value="no"
                             />
                             <label
                               class="form-check-label"
@@ -584,10 +518,18 @@
                       </div>
 
                       <div>
-                        <label class="fieldlabels" class="form-label" for="bill"
-                          >Upload Bill:</label
+                        <label
+                          class="fieldlabels"
+                          class="form-label"
+                          for="broadband-bill-file"
+                          >Upload/Scan Bill:</label
                         >
-                        <input class="form-control" type="file" name="bill" />
+                        <input
+                          class="form-control upload"
+                          type="file"
+                          name="broadband-bill-file"
+                          id="broadband-bill-file"
+                        />
                       </div>
                     </div>
                     <input
@@ -615,33 +557,112 @@
                       </div>
 
                       <div class="row justify-content-center"></div>
-                      <br /><br />
-                      <div class="row justify-content-center mb-5">
-                        <div class="col-7 text-center">
-                          <h5 class="text-center text-primary-emphasis">
-                            Based on the information you have provided, we
-                            estimate that you could save up to:
-                          </h5>
 
-                          <h1 class="text-center text-success">
-                            <strong>€ 400</strong
-                            ><small class="text-secondary"> per month</small>
-                          </h1>
+                      <div class="row justify-content-center">
+                        <h6 class="text-primary-emphasis mb-2">
+                          Based on the information you have provided, we will
+                          email you an estimate of your potential bill savings.
+                        </h6>
+
+                        <div>
+                          <!-- user name first and last -->
+                          <div class="form-floating">
+                            <input
+                              name="user-name"
+                              type="text"
+                              class="form-control border-success"
+                              id="user-name"
+                              placeholder="
+                              First and Last Name"
+                              aria-describedby="emailHelp"
+                              required
+                            />
+                            <label for="user-name" class="text-secondary"
+                              >Name</label
+                            >
+                          </div>
+
+                          <div class="form-floating">
+                            <input
+                              name="user-email"
+                              type="email"
+                              class="form-control border-success"
+                              id="user-email"
+                              placeholder="name@example.com"
+                              aria-describedby="emailHelp"
+                              required
+                            />
+                            <label for="user-email" class="text-secondary"
+                              >Email address</label
+                            >
+                            <!-- <div
+                              id="emailHelp"
+                              class="form-text text-body-tertiary"
+                            >
+                              <small>
+                                We'll send you your estimated savings & never
+                                share your email with anyone else.
+                              </small>
+                            </div> -->
+                          </div>
+
+                          <div class="form-check">
+                            <input
+                              type="checkbox"
+                              class="form-check-input border-success"
+                              id="emailCheck"
+                              name="emailCheck"
+                              value="yes"
+                            />
+                            <label
+                              class="form-check-label text-success-emphasis"
+                              for="emailCheck"
+                            >
+                              <small>
+                                Yes, I want email updates of my estimated bill
+                                savings.
+                              </small>
+                            </label>
+                          </div>
+                          <div class="form-floating mt-4">
+                            <input
+                              name="user-address"
+                              type="text"
+                              class="form-control border-success"
+                              id="user-address"
+                              placeholder="Address"
+                              aria-label="Address"
+                              required
+                            />
+                            <label for="user-address" class="text-secondary"
+                              >Address</label
+                            >
+                          </div>
+                          <div class="form-floating">
+                            <input
+                              name="user-eircode"
+                              type="text"
+                              class="form-control border-success"
+                              id="user-eircode"
+                              placeholder="eircode"
+                              aria-label="eircode"
+                              required
+                            />
+                            <label for="user-eircode" class="text-secondary"
+                              >Eircode</label
+                            >
+                          </div>
                         </div>
                       </div>
 
                       <input
-                        type="button"
+                        type="submit"
                         name="submit"
+                        id="submit"
                         class="submit action-button btn btn-success px-5 py-2 w-100"
-                        value="Join OneBill"
+                        value="Join OneBill Waiting List"
                       />
-                      <input
-                        type="button"
-                        name="previous"
-                        class="previous action-button-previous btn btn-outline-success px-4 py-2"
-                        value="Previous"
-                      />
+
                       <input
                         type="button"
                         name="reset"
@@ -691,15 +712,28 @@
             class="fa-brands fa-whatsapp text-success p-3 rounded-2 bg-body-secondary"
           ></i>
         </a>
+        <a href="mailto:adem@onebill.ie">
+          <i
+            class="fa-solid fa-envelope text-success p-3 rounded-2 bg-body-secondary"
+          ></i>
+        </a>
       </div>
 
       <div class="d-flex justify-content-between mb-4 mt-4 pe-lg-5">
         <div class="d-flex flex-column gap-2">
-          <a href="#" class="text-decoration-none text-success">Home</a>
-          <a href="#" class="text-decoration-none text-success">About Us</a>
-          <a href="#" class="text-decoration-none text-success">How It Works</a>
-          <a href="#" class="text-decoration-none text-success">FAQs</a>
-          <a href="#" class="text-decoration-none text-success">Contact Us</a>
+          <a href="index.html" class="text-decoration-none text-success"
+            >Home</a
+          >
+          <a href="about-us.html" class="text-decoration-none text-success"
+            >About Us</a
+          >
+          <a href="how-it-works.html" class="text-decoration-none text-success"
+            >How It Works</a
+          >
+          <a href="faqs.html" class="text-decoration-none text-success">FAQs</a>
+          <a href="contact-us.html" class="text-decoration-none text-success"
+            >Contact Us</a
+          >
         </div>
         <div class="d-flex flex-column gap-2">
           <a href="#" class="text-decoration-none text-secondary">
@@ -715,9 +749,7 @@
       </div>
       <p class="text-secondary">
         <small>
-          OneBill Utilities Ltd is a registered company in Ireland (Company
-          Number: 123456). Registered Office: 123 Fake Street, Dublin 1,
-          Ireland.
+          OneBill Utilities Ltd is a registered company in Ireland.
         </small>
       </p>
 

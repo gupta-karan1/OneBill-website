@@ -9,13 +9,29 @@
 body {
   font-family: "Poppins", sans-serif;
   padding-top: 5.5rem;
+}
+
+main {
   max-width: 1500px;
+  margin: 0 auto;
 }
 
 .hero {
   background-image: url("/images/hero-image.jpg");
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
+  height: 85vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+
+.about-hero {
+  background-image: url("/images/about-hero.jpg");
+  background-size: cover;
+  background-position: bottom;
   background-repeat: no-repeat;
   height: 85vh;
   display: flex;
@@ -240,5 +256,20 @@ body {
   .priceCard {
     width: 30vw;
     height: fit-content;
+  }
+
+  .faqs {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .how-it-works {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .about {
+    max-width: 1280px;
+    margin: 0 auto;
   }
 }

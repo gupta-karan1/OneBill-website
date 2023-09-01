@@ -5,9 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>OneBill Utilities Limited</title>
 
-    <!-- meta keywords -->
-
-    <!-- meta description -->
+    <!-- Meta tags for SEO -->
+    <meta
+      name="description"
+      content="OneBill Utilities - Simplify your utility bills and save money with our AI-powered platform. Manage electricity, gas, broadband, and more. Sign up for smarter savings today!"
+    />
+    <meta
+      name="keywords"
+      content="OneBill Utilities, utility bills, save money, AI-powered, electricity, gas, broadband"
+    />
+    <meta name="author" content="OneBill" />
 
     <!-- Bootstrap CDN -->
     <link
@@ -66,16 +73,16 @@
                 >
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">About Us</a>
+                <a class="nav-link" href="about-us.html">About Us</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="how-it-works.html">How It Works</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">FAQs</a>
+                <a class="nav-link" href="faqs.html">FAQs</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Contact Us</a>
+                <a class="nav-link" href="contact-us.html">Contact Us</a>
               </li>
 
               <li class="nav-item gap-5">
@@ -120,59 +127,28 @@
               </small>
             </p>
           </div>
-          <form class="gap-3 d-flex flex-column" id="estimateForm">
+          <form
+            class="gap-3 d-flex flex-column"
+            id="estimateForm"
+            name="estimateForm"
+          >
             <div class="form-floating">
               <input
                 type="text"
                 class="form-control border-success"
-                id="address"
+                id="eir-code"
                 placeholder="D07XT61"
-                aria-describedby="addressHelp"
+                aria-describedby="eir-codeHelp"
                 required
+                name="eir-code"
               />
-              <label for="address" class="text-secondary">Eircode</label>
+              <label for="eir-code" class="text-secondary">Eircode</label>
               <!-- <div id="addressHelp" class="form-text text-body-tertiary">
                 <small>
                   We'll use this to find you the best deals in your location.
                 </small>
               </div> -->
             </div>
-
-            <!-- <div class="form-floating">
-              <input
-                type="email"
-                class="form-control border-success"
-                id="InputEmail1"
-                placeholder="name@example.com"
-                aria-describedby="emailHelp"
-                required
-              />
-              <label for="InputEmail1" class="text-secondary"
-                >Email address</label
-              >
-              <div id="emailHelp" class="form-text text-body-tertiary">
-                <small>
-                  We'll send you your estimated savings & never share your email
-                  with anyone else.
-                </small>
-              </div>
-            </div> -->
-
-            <!-- <div class="form-check">
-              <input
-                type="checkbox"
-                class="form-check-input border-success"
-                id="emailCheck"
-              />
-              <label
-                class="form-check-label text-success-emphasis"
-                for="emailCheck"
-              >
-                <small>
-                  Yes, I want email updates of my estimated bill savings.
-                </small>
-              </label>
-            </div> -->
 
             <button
               type="submit"
@@ -287,10 +263,7 @@
             </p>
           </article>
         </div>
-        <a
-          href="https://demo.onebill.ie/public/customer-signup?customer_count=2"
-          class="btn btn-outline-success w-100"
-        >
+        <a href="onboarding-form.html" class="btn btn-outline-success w-100">
           Join OneBill Now
         </a>
       </section>
@@ -403,7 +376,9 @@
           </article>
         </div>
 
-        <a href="#" class="btn btn-outline-success w-100"> Learn More </a>
+        <a href="how-it-works.html" class="btn btn-outline-success w-100">
+          Learn More
+        </a>
       </section>
 
       <section class="bg-body-tertiary p-4 rounded-4 mb-4 mb-lg-5">
@@ -455,20 +430,23 @@
           </article>
           <article class="rounded-4 bg-body-secondary p-3">
             <h1 class="text-center">
-              <i class="fa-solid fa-house-crack text-body-tertiary"></i>
+              <i class="fa-solid fa-droplet text-body-tertiary"></i>
             </h1>
-            <p class="mb-0 text-body-tertiary text-center">Insurance*</p>
+            <p class="mb-0 text-body-tertiary text-center">Water*</p>
           </article>
           <article class="rounded-4 bg-body-secondary p-3">
             <h1 class="text-center">
-              <i class="fa-solid fa-house-crack text-body-tertiary"></i>
+              <i class="fa-solid fa-recycle text-body-tertiary"></i>
             </h1>
-            <p class="mb-0 text-body-tertiary text-center">Insurance*</p>
+            <p class="mb-0 text-body-tertiary text-center">Refuse*</p>
           </article>
         </div>
       </section>
 
-      <section class="bg-body-tertiary p-4 mt-4 rounded-4 mb-4 p-lg-5">
+      <section
+        class="bg-body-tertiary p-4 mt-4 rounded-4 mb-4 p-lg-5"
+        id="pricing"
+      >
         <h2 class="text-center mb-4">Select Your Ideal Plan</h2>
 
         <div
@@ -537,12 +515,17 @@
                   <p>Customer Support via WhatsApp & Email</p>
                 </div>
               </li>
+              <li class="list-group-item">
+                <div class="d-flex gap-2 align-content-center">
+                  <div>
+                    <i class="fa-solid fa-circle-check text-body-tertiary"></i>
+                  </div>
+                  <p>Share Bill with Up to 1 Housemate</p>
+                </div>
+              </li>
             </ul>
 
-            <a
-              href="https://demo.onebill.ie/public/customer-signup?customer_count=2"
-              class="btn btn-success w-100"
-            >
+            <a href="onboarding-form.html" class="btn btn-success w-100">
               Get Started with Savvy Saver
             </a>
           </article>
@@ -605,11 +588,16 @@
                   <p>Minimum Guaranteed Savings</p>
                 </div>
               </li>
+              <li class="list-group-item">
+                <div class="d-flex gap-2 align-content-center">
+                  <div>
+                    <i class="fa-solid fa-circle-check text-body-tertiary"></i>
+                  </div>
+                  <p>Customer Support via Phone</p>
+                </div>
+              </li>
             </ul>
-            <a
-              href="https://demo.onebill.ie/public/customer-signup?customer_count=2"
-              class="btn btn-success w-100"
-            >
+            <a href="onboarding-form.html" class="btn btn-success w-100">
               Upgrade to Super Saver
             </a>
           </article>
@@ -674,11 +662,16 @@
                   <p>Customer Support via Personal Agent</p>
                 </div>
               </li>
+              <li class="list-group-item">
+                <div class="d-flex gap-2 align-content-center">
+                  <div>
+                    <i class="fa-solid fa-circle-check text-body-tertiary"></i>
+                  </div>
+                  <p>AI-Powered Financial Insights</p>
+                </div>
+              </li>
             </ul>
-            <a
-              href="https://demo.onebill.ie/public/customer-signup?customer_count=2"
-              class="btn btn-success w-100"
-            >
+            <a href="onboarding-form.html" class="btn btn-success w-100">
               Unlock Premium Benefits
             </a>
           </article>
@@ -764,7 +757,9 @@
             </div>
           </div>
         </div>
-        <a href="#" class="btn btn-outline-success w-100"> Read More FAQs </a>
+        <a href="faqs.html" class="btn btn-outline-success w-100">
+          Read More FAQs
+        </a>
       </section>
       <a
         href="https://wa.me/353858007335"
@@ -813,15 +808,28 @@
             class="fa-brands fa-whatsapp text-success p-3 rounded-2 bg-body-secondary"
           ></i>
         </a>
+        <a href="mailto:adem@onebill.ie">
+          <i
+            class="fa-solid fa-envelope text-success p-3 rounded-2 bg-body-secondary"
+          ></i>
+        </a>
       </div>
 
       <div class="d-flex justify-content-between mb-4 mt-4 pe-lg-5">
         <div class="d-flex flex-column gap-2">
-          <a href="#" class="text-decoration-none text-success">Home</a>
-          <a href="#" class="text-decoration-none text-success">About Us</a>
-          <a href="#" class="text-decoration-none text-success">How It Works</a>
-          <a href="#" class="text-decoration-none text-success">FAQs</a>
-          <a href="#" class="text-decoration-none text-success">Contact Us</a>
+          <a href="index.html" class="text-decoration-none text-success"
+            >Home</a
+          >
+          <a href="about-us.html" class="text-decoration-none text-success"
+            >About Us</a
+          >
+          <a href="how-it-works.html" class="text-decoration-none text-success"
+            >How It Works</a
+          >
+          <a href="faqs.html" class="text-decoration-none text-success">FAQs</a>
+          <a href="contact-us.html" class="text-decoration-none text-success"
+            >Contact Us</a
+          >
         </div>
         <div class="d-flex flex-column gap-2">
           <a href="#" class="text-decoration-none text-secondary">
@@ -837,9 +845,7 @@
       </div>
       <p class="text-secondary">
         <small>
-          OneBill Utilities Ltd is a registered company in Ireland (Company
-          Number: 123456). Registered Office: 123 Fake Street, Dublin 1,
-          Ireland.
+          OneBill Utilities Ltd is a registered company in Ireland.
         </small>
       </p>
 

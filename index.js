@@ -1,28 +1,243 @@
 $(document).ready(function () {
-  // Store the input email and eircode on the home page in local storage
-  $("#estimateForm").submit(function (event) {
+  const scriptURL =
+    "https://script.google.com/macros/s/AKfycbxdy2m1Leo4yEnN4UeYOkENLLn0MMBrrk8QJG7CY_xvTx7knAp467DuVbzZhrghLFsH/exec";
+
+  const scriptContact =
+    "https://script.google.com/macros/s/AKfycbz3N6RqlrzaHktGT-BxidVGAd1iU7GwqmMI39gLjNgE0DvEosRncfaSnfxkh5to_fFHaQ/exec";
+  const form = document.forms["estimateForm"];
+  const form2 = document.forms["msform"];
+  const form3 = document.forms["contactForm"];
+
+  $(form3).submit(function (event) {
     event.preventDefault(); // Prevent the form from submitting
-    // Get the values from the input fields
-    var address = $("#address").val();
-    var email = $("#InputEmail1").val();
-    var emailUpdates = $("#emailCheck").prop("checked");
 
-    // Create an object to store the input data
-    var inputData = {
-      address: address,
-      email: email,
-      emailUpdates: emailUpdates,
+    const formData = new FormData(this);
+
+    fetch(scriptContact, { method: "POST", body: formData })
+      .then((response) => {
+        alert("Form submitted successfully");
+        // reload window
+        window.location.reload();
+      })
+      .catch((error) => console.error("Error!", error.message));
+  });
+
+  $(form).submit(function (event) {
+    event.preventDefault(); // Prevent the form from submitting
+
+    let eircode = $("#eir-code").val();
+    let inputData = {
+      eircode: eircode,
     };
+    let inputDataJSON = JSON.stringify(inputData);
+    localStorage.setItem("eircode", inputDataJSON);
 
-    // Convert the object to a JSON string
-    var inputDataJSON = JSON.stringify(inputData);
-
-    // Store the JSON string in the local storage
-    localStorage.setItem("inputData", inputDataJSON);
-
-    // Redirect the user to the next page
     window.location.href = "onboarding-form.html";
   });
+
+  // set the value of the eircode in the form to the value stored in local storage
+  let eircode = JSON.parse(localStorage.getItem("eircode"));
+  $("#user-eircode").val(eircode.eircode);
+
+  // $(form2).submit(function (event) {
+  //   event.preventDefault(); // Prevent the form from submitting
+
+  //   const formData = new FormData(this);
+
+  //   const fileInputs = $(this).find("input[type=file]");
+
+  //   const fileCount = fileInputs.length;
+  //   let filesProcessed = 0;
+
+  //   fileInputs.each(function () {
+  //     const header = $(this).attr("name");
+  //     const file = this.files[0];
+  //     // console.log(file);
+  //     if (file) {
+  //       const reader = new FileReader();
+  //       reader.onload = function (e) {
+  //         formData.append(`${header}`, e.target.result);
+  //         formData.append(`${header}-mimetype`, file.type);
+  //         formData.append(`${header}-filename`, file.name);
+  //         filesProcessed++;
+  //       };
+  //       reader.readAsDataURL(file);
+  //     } else {
+  //       filesProcessed++;
+  //     }
+
+  //     // Check if all files are processed before submitting the form
+
+  //     if (filesProcessed === fileCount) {
+  //       fetch(scriptURL, { method: "POST", body: formData })
+  //         .then((response) => {
+  //           alert("Form submitted successfully");
+  //           // reload window
+  //           // window.location.href = "onboarding-form.html";
+  //         })
+  //         .catch((error) => console.error("Error!", error.message));
+  //     }
+  //   });
+  // });
+
+  // $(form2).submit(function (event) {
+  //   event.preventDefault(); // Prevent the form from submitting
+
+  //   const formData = new FormData(this);
+
+  //   const fileInputs = $(this).find("input[type=file]");
+
+  //   const fileCount = fileInputs.length;
+  //   let filesProcessed = 0;
+
+  //   fileInputs.each(function () {
+  //     const header = $(this).attr("name");
+  //     const file = this.files[0];
+
+  //     if (file) {
+  //       const reader = new FileReader();
+  //       reader.onload = function (e) {
+  //         formData.append(`${header}-file`, e.target.result);
+  //         formData.append(`${header}-mimetype`, file.type);
+  //         formData.append(`${header}-filename`, file.name);
+  //         filesProcessed++;
+
+  //         // Check if all files are processed before submitting the form
+  //         if (filesProcessed === fileCount) {
+  //           submitForm(formData);
+  //         }
+  //       };
+  //       reader.readAsDataURL(file);
+  //     } else {
+  //       filesProcessed++;
+
+  //       // Check if all files are processed before submitting the form
+  //       if (filesProcessed === fileCount) {
+  //         submitForm(formData);
+  //       }
+  //     }
+  //   });
+  // });
+
+  // function submitForm(formData) {
+  //   // Submit the form data
+  //   fetch(scriptURL, { method: "POST", body: formData })
+  //     .then((response) => {
+  //       alert("Form submitted successfully", response);
+  //       // reload window
+  //       // window.location.href = "onboarding-form.html";
+  //     })
+  //     .catch((error) => console.error("Error!", error.message));
+  // }
+
+  // $(form2).submit(function (event) {
+  //   event.preventDefault(); // Prevent the form from submitting
+
+  //   const formData = new FormData(this);
+
+  //   // find all file inputs
+  //   const fileInputs = $(this).find("input[type=file]");
+  //   // const fileInputs = $(this).find(".upload");
+
+  //   const fileCount = fileInputs.length;
+  //   let filesProcessed = 0;
+
+  //   fileInputs.each(function () {
+  //     const header = $(this).attr("name");
+  //     const file = this.files[0]; // Get the file object from the input
+
+  //     if (file) {
+  //       const reader = new FileReader();
+  //       reader.onload = function (e) {
+  //         const vals = e.target.result.split(",");
+  //         const obj = {
+  //           fileName: file.name,
+  //           mimeType: file.type,
+  //           base64: vals[1],
+  //         };
+  //         formData.append(`${header}`, JSON.stringify(obj));
+  //         filesProcessed++;
+
+  //         // Check if all files are processed before submitting the form
+  //         if (filesProcessed === fileCount) {
+  //           submitForm(formData);
+  //         }
+  //       };
+  //       reader.readAsDataURL(file);
+  //     } else {
+  //       filesProcessed++;
+  //       // Check if all files are processed before submitting the form
+  //       if (filesProcessed === fileCount) {
+  //         submitForm(formData);
+  //       }
+  //     }
+  //   });
+  // });
+
+  // function submitForm(formData) {
+  //   // Submit the form data
+  //   fetch(scriptURL, { method: "POST", body: formData })
+  //     .then((response) => {
+  //       alert("Form submitted successfully");
+  //       // reload window
+  //       window.location.href = "onboarding-form.html";
+  //     })
+  //     .catch((error) => console.error("Error!", error.message));
+  // }
+
+  $(form2).submit(function (event) {
+    event.preventDefault(); // Prevent the form from submitting
+
+    const formData = new FormData(this);
+
+    const fileInputs = $(this).find("input[type=file]");
+    const fileCount = fileInputs.length;
+    let filesProcessed = 0;
+
+    fileInputs.each(function () {
+      const header = $(this).attr("name");
+      const file = this.files[0];
+
+      if (file) {
+        const reader = new FileReader();
+        reader.onload = function (e) {
+          const fileData = {
+            fileName: file.name,
+            mimeType: file.type,
+            base64: e.target.result.split(",")[1],
+          };
+          formData.append(`${header}-file`, JSON.stringify(fileData));
+          filesProcessed++;
+
+          if (filesProcessed === fileCount) {
+            submitForm(formData);
+          }
+        };
+        reader.readAsDataURL(file);
+      } else {
+        filesProcessed++;
+        if (filesProcessed === fileCount) {
+          submitForm(formData);
+        }
+      }
+    });
+  });
+
+  function submitForm(formData) {
+    console.log("Submitting form data:", formData);
+    fetch(scriptURL, { method: "POST", body: formData })
+      .then((response) => response.json())
+      .then((data) => {
+        console.log("Response from server:", data);
+        if (data.result === "success") {
+          alert("Form submitted successfully");
+          // ... rest of the code
+        } else {
+          alert("Error submitting form: " + data.error);
+        }
+      })
+      .catch((error) => console.error("Error!", error.message));
+  }
 
   var fieldsets = $("fieldset");
   var progressItems = $("#progressbar li");
@@ -89,10 +304,4 @@ $(document).ready(function () {
     progressItems.removeClass("active");
     progressItems.slice(0, curStep + 1).addClass("active");
   }
-
-  $(".submit").click(function () {
-    window.location.href =
-      "https://demo.onebill.ie/public/customer-signup?customer_count=2";
-    return false;
-  });
 });

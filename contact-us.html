@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us | OneBill Utilities</title>
+
+    <!-- Meta tags for SEO -->
+    <meta
+      name="description"
+      content="Get in touch with OneBill Utilities for any inquiries, questions, or assistance with your utility bills. Our dedicated support team is here to help you."
+    />
+    <meta
+      name="keywords"
+      content="OneBill Utilities, contact us, customer support, utility bill assistance"
+    />
+    <meta name="author" content="OneBill" />
+
+    <!-- Bootstrap CDN -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+
+    <!-- font awesome cdn link -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    />
+
+    <!-- swiper slider CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
+
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Poppins:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar fixed-top navbar-expand-lg bg-light-subtle">
+        <div class="container-fluid ps-lg-5 pe-lg-5">
+          <a class="navbar-brand" href="index.html">
+            <img src="images/onebill-logo.png" alt="OneBill Logo" height="45" />
+          </a>
+          <button
+            class="navbar-toggler border-0"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"> </span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mb-2 ms-lg-auto mb-lg-0 gap-2">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="index.html"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about-us.html">About Us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="how-it-works.html">How It Works</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="faqs.html">FAQs</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contact-us.html">Contact Us</a>
+              </li>
+
+              <li class="nav-item gap-5">
+                <a
+                  class="btn btn-success"
+                  href="https://demo.onebill.ie/public/customer-signup?customer_count=2"
+                  >Sign Up</a
+                >
+                <a
+                  class="btn btn-outline-success"
+                  href="https://demo.onebill.ie/public/portal/login"
+                  >Login</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="faqs px-3 px-lg-5">
+      <section
+        class="container-fluid pt-5 bg-body-tertiary rounded-4 py-5 mb-4"
+      >
+        <h1 class="text-center text-success-emphasis mb-3">Contact Us</h1>
+        <form
+          class="gap-3 d-flex flex-column p-lg-3"
+          id="contactForm"
+          method="post"
+          name="contactForm"
+          action="https://script.google.com/macros/s/AKfycbz3N6RqlrzaHktGT-BxidVGAd1iU7GwqmMI39gLjNgE0DvEosRncfaSnfxkh5to_fFHaQ/exec"
+        >
+          <div class="form-floating">
+            <input
+              type="text"
+              class="form-control border-success"
+              id="InputName1"
+              placeholder="John Doe"
+              required
+              name="name"
+            />
+            <label for="InputName1" class="text-secondary">Name</label>
+          </div>
+
+          <div class="form-floating">
+            <input
+              type="email"
+              class="form-control border-success"
+              id="InputEmail1"
+              placeholder="name@example.com"
+              aria-describedby="emailHelp"
+              required
+              name="contact-email"
+            />
+            <label for="InputEmail1" class="text-secondary"
+              >Email address</label
+            >
+            <div id="emailHelp" class="form-text text-body-tertiary">
+              <small> We'll never share your email with anyone else. </small>
+            </div>
+          </div>
+
+          <div class="form-check">
+            <input
+              type="checkbox"
+              class="form-check-input border-success"
+              id="emailCheck"
+              name="email-check"
+            />
+            <label
+              class="form-check-label text-success-emphasis"
+              for="emailCheck"
+            >
+              <small> Yes, I want email updates from OneBill. </small>
+            </label>
+          </div>
+
+          <div class="form-floating">
+            <textarea
+              class="form-control border-success"
+              placeholder="Leave a comment here"
+              id="floatingTextarea2"
+              style="height: 100px"
+              required
+              name="message"
+            ></textarea>
+            <label for="floatingTextarea2" class="text-secondary"
+              >Message</label
+            >
+          </div>
+
+          <button
+            type="submit"
+            id="contactUsBtn"
+            class="btn btn-success w-100 mb-sm-3"
+          >
+            Contact Us
+          </button>
+          <p class="text-body-tertiary">
+            <small>
+              Note: We take your privacy seriously. Your information will not be
+              shared with any third parties.
+            </small>
+          </p>
+        </form>
+        <div
+          class="d-flex gap-3 flex-column flex-lg-row justify-content-center align-items-baseline mb-5"
+        >
+          <p>Connect with Us:</p>
+          <div class="d-flex justify-content-between align-items-center gap-4">
+            <a href="https://twitter.com/OneBill_Ireland">
+              <i
+                class="fa-brands fa-twitter text-success p-3 rounded-2 bg-body-secondary"
+              >
+              </i>
+            </a>
+            <a href="https://www.instagram.com/onebill_utilities">
+              <i
+                class="fa-brands fa-instagram text-success p-3 rounded-2 bg-body-secondary"
+              ></i>
+            </a>
+            <a href="https://www.linkedin.com/company/onebillutilities/">
+              <i
+                class="fa-brands fa-linkedin-in text-success p-3 rounded-2 bg-body-secondary"
+              ></i>
+            </a>
+            <a href="https://wa.me/353858007335">
+              <i
+                class="fa-brands fa-whatsapp text-success p-3 rounded-2 bg-body-secondary"
+              ></i>
+            </a>
+            <a href="mailto:adem@onebill.ie">
+              <i
+                class="fa-solid fa-envelope text-success p-3 rounded-2 bg-body-secondary"
+              ></i>
+            </a>
+          </div>
+        </div>
+        <a href="onboarding-form.html" class="btn btn-outline-success w-100">
+          Join OneBill
+        </a>
+      </section>
+    </main>
+    <footer class="bg-body-tertiary p-4 p-lg-5">
+      <a href="index.html"
+        ><img
+          src="images/onebill-logo.png"
+          alt="OneBill Logo"
+          class="img-fluid w-25 mb-2"
+      /></a>
+
+      <p class="text-secondary">
+        <small>© 2023, OneBill Utilities Ltd</small>
+      </p>
+
+      <div class="d-flex gap-2">
+        <a href="https://twitter.com/OneBill_Ireland">
+          <i
+            class="fa-brands fa-twitter text-success p-3 rounded-2 bg-body-secondary"
+          >
+          </i>
+        </a>
+        <a href="https://www.instagram.com/onebill_utilities">
+          <i
+            class="fa-brands fa-instagram text-success p-3 rounded-2 bg-body-secondary"
+          ></i>
+        </a>
+        <a href="https://www.linkedin.com/company/onebillutilities/">
+          <i
+            class="fa-brands fa-linkedin-in text-success p-3 rounded-2 bg-body-secondary"
+          ></i>
+        </a>
+        <a href="https://wa.me/353858007335">
+          <i
+            class="fa-brands fa-whatsapp text-success p-3 rounded-2 bg-body-secondary"
+          ></i>
+        </a>
+        <a href="mailto:adem@onebill.ie">
+          <i
+            class="fa-solid fa-envelope text-success p-3 rounded-2 bg-body-secondary"
+          ></i>
+        </a>
+      </div>
+
+      <div class="d-flex justify-content-between mb-4 mt-4 pe-lg-5">
+        <div class="d-flex flex-column gap-2">
+          <a href="index.html" class="text-decoration-none text-success"
+            >Home</a
+          >
+          <a href="about-us.html" class="text-decoration-none text-success"
+            >About Us</a
+          >
+          <a href="how-it-works.html" class="text-decoration-none text-success"
+            >How It Works</a
+          >
+          <a href="faqs.html" class="text-decoration-none text-success">FAQs</a>
+          <a href="contact-us.html" class="text-decoration-none text-success"
+            >Contact Us</a
+          >
+        </div>
+        <div class="d-flex flex-column gap-2">
+          <a href="#" class="text-decoration-none text-secondary">
+            <small>Terms & Conditions</small>
+          </a>
+          <a href="#" class="text-decoration-none text-secondary">
+            <small>Privacy Policy</small>
+          </a>
+          <a href="#" class="text-decoration-none text-secondary">
+            <small>Cookie Policy</small>
+          </a>
+        </div>
+      </div>
+      <p class="text-secondary">
+        <small>
+          OneBill Utilities Ltd is a registered company in Ireland.
+        </small>
+      </p>
+
+      <p class="text-secondary">
+        <small> CRO: 658186 </small>
+      </p>
+    </footer>
+
+    <!-- Bootstrap JS Link -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://code.jquery.com/jquery-3.7.0.js"
+      integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="index.js"></script>
+  </body>
+</html>
