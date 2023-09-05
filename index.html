@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
+    <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>OneBill Utilities Limited</title>
-
     <!-- Meta tags for SEO -->
     <meta
       name="description"
@@ -15,40 +14,28 @@
       content="OneBill Utilities, utility bills, save money, AI-powered, electricity, gas, broadband"
     />
     <meta name="author" content="OneBill" />
-
     <!-- Bootstrap CDN -->
     <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
       crossorigin="anonymous"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      rel="stylesheet"
     />
-
     <!-- font awesome cdn link -->
     <link
-      rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
-    />
-
-    <!-- swiper slider CDN -->
-    <link
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
     />
-
     <!-- Google fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Poppins:wght@300;400;500;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;family=Poppins:wght@300;400;500;600;700;800&amp;display=swap"
       rel="stylesheet"
     />
-
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/style.css" />
-
+    <link href="css/style.css" rel="stylesheet" />
     <!-- Clarity -->
-
     <script type="text/javascript">
       (function (c, l, a, r, i, t, y) {
         c[a] =
@@ -68,24 +55,27 @@
     <header>
       <nav class="navbar fixed-top navbar-expand-lg bg-light-subtle">
         <div class="container-fluid ps-lg-5 pe-lg-5">
-          <a class="navbar-brand" href="index.html">
-            <img src="images/onebill-logo.png" alt="OneBill Logo" height="45" />
-          </a>
-          <button
-            class="navbar-toggler border-0"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent"
+          <a class="navbar-brand" href="index.html"
+            ><img
+              alt="OneBill Logo"
+              height="45"
+              src="images/onebill-logo.png"
+            /> </a
+          ><button
             aria-controls="navbarSupportedContent"
             aria-expanded="false"
             aria-label="Toggle navigation"
+            class="navbar-toggler border-0"
+            data-bs-target="#navbarSupportedContent"
+            data-bs-toggle="collapse"
+            type="button"
           >
             <span class="navbar-toggler-icon"> </span>
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mb-2 ms-lg-auto mb-lg-0 gap-2">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="index.html"
+                <a aria-current="page" class="nav-link active" href="index.html"
                   >Home</a
                 >
               </li>
@@ -101,7 +91,6 @@
               <li class="nav-item">
                 <a class="nav-link" href="contact-us.html">Contact Us</a>
               </li>
-
               <li class="nav-item gap-5">
                 <a
                   class="btn btn-success"
@@ -119,31 +108,36 @@
         </div>
       </nav>
     </header>
+
     <main class="home px-3 px-lg-5">
       <div
         class="mb-lg-5 d-lg-flex justify-content-lg-between align-items-lg-center gap-lg-4 mb-4 mb-lg-0"
       >
         <section class="hero p-3 rounded-4 mb-4 mb-lg-0">
           <div class="bg-opacity-75 bg-light rounded-3 p-3 4">
-            <h1><strong>Tired of utility bills hassle? </strong> <br /></h1>
+            <h1><strong>Do You Hate Utility Bills? </strong></h1>
+
             <p>
-              Unlock big savings on your utility bills. We find you the best
-              rates and switch your providers in a hassle-free way. All of it
-              while you enjoy the savings!
+              We search, switch and save so you don't have to! OneBill
+              AutoSwitch finds you the best rates and switches your providers
+              automatically based on your personal usage and needs!
             </p>
           </div>
         </section>
+
         <section
           class="onboarding-form bg-body-tertiary p-4 rounded-4 gap-3 d-lg-flex flex-lg-column justify-content-lg-center align-items-lg-center"
         >
           <div>
             <h3 class="text-center">Discover Your Savings!</h3>
+
             <p class="text-center text-secondary">
-              <small>
-                Find out how much you could save on your utility bills.
+              <small
+                >Find out how much you could save on your utility bills.
               </small>
             </p>
           </div>
+
           <form
             class="gap-3 d-flex flex-column"
             id="estimateForm"
@@ -151,34 +145,29 @@
           >
             <div class="form-floating">
               <input
-                type="text"
+                aria-describedby="eir-codeHelp"
                 class="form-control border-success"
                 id="eir-code"
-                placeholder="D07XT61"
-                aria-describedby="eir-codeHelp"
-                required
                 name="eir-code"
+                placeholder="D07XT61"
+                required=""
+                type="text"
               />
-              <label for="eir-code" class="text-secondary">Eircode</label>
-              <!-- <div id="addressHelp" class="form-text text-body-tertiary">
-                <small>
-                  We'll use this to find you the best deals in your location.
-                </small>
-              </div> -->
+              <label class="text-secondary" for="eir-code">Eircode</label>
             </div>
-
             <button
-              type="submit"
-              id="estimateStart"
               class="btn btn-success w-100 mb-sm-3"
+              id="estimateStart"
+              type="submit"
             >
-              Estimate My Savings <i class="fa-solid fa-chevron-right"></i>
+              Estimate My Savings
             </button>
+
             <p class="text-body-tertiary">
-              <small>
-                Note: We take your privacy seriously. Your information will only
-                be used to provide you with the estimated bill savings and will
-                not be shared with any third parties.
+              <small
+                >We take your privacy seriously. Your information will only be
+                used to provide you with the estimated bill savings and will not
+                be shared with any third parties.
               </small>
             </p>
           </form>
@@ -191,209 +180,203 @@
         >
           <div class="card rounded-4 border-0 bg-body-tertiary mb-4">
             <img
-              src="images/intro-image1.jpg"
               alt="managing multiple bills with OneBill"
               class="card-img-top rounded-top-4"
+              src="images/intro-image1.jpg"
+              loading="lazy"
             />
             <div class="card-body">
               <h5 class="card-title">Simplify Your Life</h5>
+
               <p class="card-text">
                 Say goodbye to the headache of managing multiple utility bills.
               </p>
             </div>
           </div>
+
           <div class="card rounded-4 border-0 bg-body-tertiary mb-3">
             <img
-              src="images/intro-image2.jpg"
               alt="managing multiple bills with OneBill"
               class="card-img-top rounded-top-4"
+              src="images/intro-image2.jpg"
+              loading="lazy"
             />
             <div class="card-body">
               <h5 class="card-title">Save More, Stress Less</h5>
+
               <p class="card-text">
-                Imagine saving extra
-                <strong>€1161</strong> in your pocket every year. We search,
-                switch, and save for you!
+                Most homes save over&nbsp;<strong>&euro;1161</strong>&nbsp;a
+                year. We search, switch and save for you!
               </p>
             </div>
           </div>
+
           <div class="card rounded-4 border-0 bg-body-tertiary mb-4">
             <img
-              src="images/intro-image3.jpg"
               alt="managing multiple bills with OneBill"
               class="card-img-top rounded-top-4"
+              src="images/intro-image3.jpg"
+              loading="lazy"
             />
             <div class="card-body">
-              <h5 class="card-title">Join the Thriving Majority</h5>
+              <h5 class="card-title">Guaranteed Savings</h5>
+
               <p class="card-text">
-                You're not alone - <strong>67% </strong> of households have the
-                potential to save over <strong>€1179</strong> annually.
+                Our savings guarantee means you can relax. We&#39;ll be working
+                hard saving you money 24/7
               </p>
             </div>
           </div>
         </section>
-        <!-- <a
-          href="https://demo.onebill.ie/public/customer-signup?customer_count=2"
-          class="btn btn-success w-100 mt-2 mb-4 mb-lg-5"
-        >
-          Begin Your Savings Journey
-        </a> -->
       </div>
 
       <section
         class="bg-body-tertiary p-4 rounded-4 mb-4 mb-lg-5 gap-3 d-flex flex-column justify-content-center align-items-center"
       >
         <h2 class="text-center mb-lg-5">Why Join OneBill ?</h2>
+
         <div
           class="d-flex flex-column flex-lg-row gap-lg-5 gap-5 justify-content-lg-around align-items-lg-start"
         >
           <article class="px-lg-5">
-            <h1>
-              <i class="fa-regular fa-calendar-check text-success"></i>
-            </h1>
+            <h1><i class="fa-regular fa-calendar-check text-success"></i></h1>
+
             <h5>Precise Payments</h5>
+
             <p>
-              Our algorithms analyze every bill, ensuring you pay the right
+              Our algorithms analyse every bill, ensuring you pay the right
               amount on a schedule that suits you.
             </p>
           </article>
 
           <article class="px-lg-5">
-            <h1>
-              <i class="fa-solid fa-handshake-slash text-success"></i>
-            </h1>
+            <h1><i class="fa-solid fa-handshake-slash text-success"></i></h1>
+
             <h5>Truly Independent</h5>
+
             <p>
               Our decisions are rooted in data, not commissions. Our focus is
-              solely on what's best for you.
+              solely on what&#39;s best for you.
             </p>
           </article>
 
           <article class="px-lg-5">
-            <h1>
-              <i class="fa-solid fa-file-shield text-success"></i>
-            </h1>
+            <h1><i class="fa-solid fa-file-shield text-success"></i></h1>
+
             <h5>End of Billing Chaos</h5>
+
             <p>
               We consolidate all your utilities into one transparent bill,
               available 24/7 in your customer portal.
             </p>
           </article>
         </div>
-        <a href="onboarding-form.html" class="btn btn-outline-success w-100">
-          Join OneBill Now
+        <a class="btn btn-outline-success w-100" href="onboarding-form.html"
+          >Join OneBill Now
         </a>
       </section>
 
       <section class="bg-body-tertiary p-4 rounded-4 mb-4 mb-lg-5">
         <h2 class="text-center mb-4">Power-Packed Offerings</h2>
+
         <div
           class="d-lg-flex gap-lg-5 justify-content-lg-evenly align-items-lg-start"
         >
           <article class="mb-3 rounded-4 p-3 bg-body-secondary">
             <img
-              src="images/budget-plan.png"
               alt="managing multiple bills with OneBill"
               class="rounded-4 img-fluid mb-3 mb-lg-0 px-lg-5"
+              src="images/budget-plan.png"
             />
-            <h5>Advanced Budget Plan <br /></h5>
+            <h5>Advanced Budget Plan</h5>
+
             <p>
-              We've harnessed AI to create a personalized budget that adapts to
+              We use AI and ML to create a personalised budget that adapts to
               your usage patterns.
             </p>
           </article>
+
           <article class="mb-3 rounded-4 p-3 bg-body-secondary">
             <img
-              src="images/customer-portal.png"
               alt="managing multiple bills with OneBill"
               class="rounded-4 img-fluid mb-3 mb-lg-0 px-lg-5"
+              src="images/customer-portal.png"
             />
-            <h5>Personalized Customer Portal</h5>
+            <h5>Personalised Customer Portal</h5>
+
             <p>
-              Available 24/7. Here, you'll find a clear, consolidated overview
-              of all your utility details.
+              Available 24/7. A Clear, consolidated overview of all your utility
+              details.
             </p>
           </article>
+
           <article class="mb-3 rounded-4 p-3 bg-body-secondary">
             <img
-              src="images/invite-housemate.png"
               alt="managing multiple bills with OneBill"
               class="rounded-4 img-fluid mb-3 mb-lg-0 px-lg-5"
+              src="images/invite-housemate.png"
             />
-            <h5>Bill-Share</h5>
+            <h5>Split The Bills</h5>
+
             <p>
-              Sharing expenses with housemates? Our Bill-Share feature lets you
-              split costs seamlessly.
+              Sharing with housemates? Split-The-Bills lets you share costs
+              seamless.
             </p>
           </article>
         </div>
-        <!-- <a
-          href="https://demo.onebill.ie/public/customer-signup?customer_count=2"
-          class="btn btn-success w-100"
-          >Sign Up Now</a
-        > -->
       </section>
 
       <section class="bg-body-tertiary p-4 rounded-4 mb-4 mb-lg-5">
         <h2 class="text-center mb-4 mb-lg-5">How Does it Work?</h2>
         <div
-          class="d-lg-flex gap-lg-4 justify-content-lg-around align-items-lg-start"
+          class="row row-cols-1 row-gap-1 row-cols-lg-4 column-gap-lg-1 flex-lg-nowrap flex-lg-grow-1 justify-content-lg-between p-lg-3"
         >
-          <article class="bg-body-secondary p-4 rounded-3 mb-4">
+          <article class="bg-body-secondary p-4 rounded-3">
             <h1><i class="fa-solid fa-user-plus text-success"></i></h1>
             <div>
               <h5>Sign Up With Us</h5>
-              <p>Some basic information from you, and you're good to go!</p>
+              <p class="mb-0">
+                Some basic information from you and you're good to go!
+              </p>
             </div>
           </article>
-          <article class="bg-body-secondary p-4 rounded-3 mb-4">
+          <article class="bg-body-secondary p-4 rounded-3">
             <h1>
               <i class="fa-solid fa-magnifying-glass-chart text-success"></i>
             </h1>
             <div>
               <h5>We Analyze Your Bills</h5>
-              <p>
+              <p class="mb-0">
                 Upload old bills or scan them with your phone. We'll take it
                 from there.
-
-                <!-- We'll analyze your bills and find you the best deals in your area.
-            We take into account your usage, your location, and your preferences
-            to ensure you get the best rates. -->
               </p>
             </div>
           </article>
-          <article class="bg-body-secondary p-4 rounded-3 mb-4">
+          <article class="bg-body-secondary p-4 rounded-3">
             <h1><i class="fa-solid fa-shuffle text-success"></i></h1>
             <div>
               <h5>We Switch Your Providers</h5>
-              <p>
-                We'll switch your providers for you, ensuring a seamless
-                transition.
-
-                <!-- You'll receive a single bill from us, and we'll take care of the
-                    rest. -->
+              <p class="mb-0">
+                If there's a saving, we'll switch your providers automatically.
               </p>
             </div>
           </article>
-          <article class="bg-body-secondary p-4 rounded-3 mb-4">
+          <article class="bg-body-secondary p-4 rounded-3">
             <h1>
               <i class="fa-solid fa-money-bill-trend-up text-success"></i>
             </h1>
             <div>
               <h5>You Save & Relax!</h5>
 
-              <p>
-                Enjoy the savings! We'll continue to monitor your bills and
-                ensure you get the best rates.
-
-                <!-- You can access your bills and usage
-            information anytime in your customer portal. -->
+              <p class="mb-0">
+                Enjoy the savings! We'll continue to monitor the market and your
+                bills. We'll ensure you get the best rates.
               </p>
             </div>
           </article>
         </div>
 
-        <a href="how-it-works.html" class="btn btn-outline-success w-100">
+        <a href="how-it-works.html" class="btn btn-outline-success w-100 mt-4">
           Learn More
         </a>
       </section>
@@ -408,53 +391,68 @@
             <h1 class="text-center">
               <i class="fa-solid fa-bolt text-success"></i>
             </h1>
+
             <p class="mb-0 text-success text-center">Electricity</p>
           </article>
           <!-- gas -->
+
           <article class="rounded-4 bg-body-secondary p-3">
             <h1 class="text-center">
               <i class="fa-solid fa-fire text-success"></i>
             </h1>
+
             <p class="mb-0 text-success text-center">Gas</p>
           </article>
           <!-- broadband -->
+
           <article class="rounded-4 bg-body-secondary p-3">
             <h1 class="text-center">
               <i class="fa-solid fa-wifi text-success"></i>
             </h1>
+
             <p class="mb-0 text-success text-center">Broadband</p>
           </article>
           <!-- mobile -->
+
           <article class="rounded-4 bg-body-secondary p-3">
             <h1 class="text-center">
               <i class="fa-solid fa-mobile-android text-body-tertiary"></i>
             </h1>
+
             <p class="mb-0 text-body-tertiary text-center">Mobile*</p>
           </article>
           <!-- tv -->
+
           <article class="rounded-4 bg-body-secondary p-3">
             <h1 class="text-center">
               <i class="fa-solid fa-tv text-body-tertiary"></i>
             </h1>
+
             <p class="mb-0 text-body-tertiary text-center">TV*</p>
           </article>
           <!-- insurance -->
+
           <article class="rounded-4 bg-body-secondary p-3">
             <h1 class="text-center">
               <i class="fa-solid fa-house-crack text-body-tertiary"></i>
             </h1>
+
             <p class="mb-0 text-body-tertiary text-center">Insurance*</p>
           </article>
+
           <article class="rounded-4 bg-body-secondary p-3">
             <h1 class="text-center">
               <i class="fa-solid fa-droplet text-body-tertiary"></i>
             </h1>
+
             <p class="mb-0 text-body-tertiary text-center">Water*</p>
           </article>
+
           <article class="rounded-4 bg-body-secondary p-3">
             <h1 class="text-center">
               <i class="fa-solid fa-recycle text-body-tertiary"></i>
             </h1>
+
             <p class="mb-0 text-body-tertiary text-center">Refuse*</p>
           </article>
         </div>
@@ -474,9 +472,11 @@
 
             <h3 class="mb-3">
               <small class="text-decoration-line-through text-body-tertiary"
-                >€15</small
-              ><strong class="text-success"> €10/month</strong>
+                >&euro;15</small
+              ><strong class="text-success"> &euro;10/month*</strong>
             </h3>
+
+            <p class="text-secondary">*Plus the cost of your bills</p>
 
             <ul class="list-group-flush p-1">
               <li class="list-group-item">
@@ -484,52 +484,44 @@
                   <div>
                     <i class="fa-solid fa-circle-check text-body-tertiary"></i>
                   </div>
+
                   <p>Manage up to 3 Utilities</p>
                 </div>
               </li>
-
               <li class="list-group-item">
                 <div class="d-flex gap-2 align-content-center">
                   <div>
                     <i class="fa-solid fa-circle-check text-body-tertiary"></i>
                   </div>
+
                   <p>Receive One Combined Bill</p>
                 </div>
               </li>
-
               <li class="list-group-item">
                 <div class="d-flex gap-2 align-content-center">
                   <div>
                     <i class="fa-solid fa-circle-check text-body-tertiary"></i>
                   </div>
+
                   <p>AI Bill Monitoring for Efficiency</p>
                 </div>
               </li>
-
               <li class="list-group-item">
                 <div class="d-flex gap-2 align-content-center">
                   <div>
                     <i class="fa-solid fa-circle-check text-body-tertiary"></i>
                   </div>
+
                   <p>Weekly, Fortnightly, or Monthly Payments</p>
                 </div>
               </li>
-
               <li class="list-group-item">
                 <div class="d-flex gap-2 align-content-center">
                   <div>
                     <i class="fa-solid fa-circle-check text-body-tertiary"></i>
                   </div>
-                  <p>24/7 Cost & Payment Checks</p>
-                </div>
-              </li>
 
-              <li class="list-group-item">
-                <div class="d-flex gap-2 align-content-center">
-                  <div>
-                    <i class="fa-solid fa-circle-check text-body-tertiary"></i>
-                  </div>
-                  <p>Customer Support via WhatsApp & Email</p>
+                  <p>24/7 Cost &amp; Payment Checks</p>
                 </div>
               </li>
               <li class="list-group-item">
@@ -537,30 +529,43 @@
                   <div>
                     <i class="fa-solid fa-circle-check text-body-tertiary"></i>
                   </div>
+
+                  <p>Customer Support via WhatsApp &amp; Email</p>
+                </div>
+              </li>
+              <li class="list-group-item">
+                <div class="d-flex gap-2 align-content-center">
+                  <div>
+                    <i class="fa-solid fa-circle-check text-body-tertiary"></i>
+                  </div>
+
                   <p>Share Bill with Up to 1 Housemate</p>
                 </div>
               </li>
             </ul>
-
-            <a href="onboarding-form.html" class="btn btn-success w-100">
-              Get Started with Savvy Saver
+            <a class="btn btn-success w-100" href="onboarding-form.html"
+              >Get Started with Savvy Saver
             </a>
           </article>
 
           <article class="priceCard bg-body-secondary p-4 rounded-3 mb-3">
             <h5 class="mb-3">Super Saver Plan</h5>
+
             <h3 class="mb-3">
               <small class="text-decoration-line-through text-body-tertiary"
-                >€20</small
-              ><strong class="text-success"> €15/month</strong>
+                >&euro;20</small
+              ><strong class="text-success"> &euro;15/month*</strong>
             </h3>
+
+            <p class="text-secondary">*Plus the cost of your bills</p>
 
             <ul class="list-group-flush p-1">
               <li class="list-group-item">
                 <div class="d-flex gap-2 align-content-center">
                   <div>
-                    <i class="fa-solid fa-circle-plus text-body-tertiary"></i>
+                    <i class="fa-solid fa-circle-check text-body-tertiary"></i>
                   </div>
+
                   <p><strong>All Savvy Saver Plan Benefits</strong></p>
                 </div>
               </li>
@@ -569,15 +574,16 @@
                   <div>
                     <i class="fa-solid fa-circle-check text-body-tertiary"></i>
                   </div>
+
                   <p>Manage up to <strong>5</strong> Utilities</p>
                 </div>
               </li>
-
               <li class="list-group-item">
                 <div class="d-flex gap-2 align-content-center">
                   <div>
                     <i class="fa-solid fa-circle-check text-body-tertiary"></i>
                   </div>
+
                   <p>AI-Powered Bill Tech for Precision</p>
                 </div>
               </li>
@@ -586,6 +592,7 @@
                   <div>
                     <i class="fa-solid fa-circle-check text-body-tertiary"></i>
                   </div>
+
                   <p>Real-Time Bill Reviews (2x per month)</p>
                 </div>
               </li>
@@ -594,6 +601,7 @@
                   <div>
                     <i class="fa-solid fa-circle-check text-body-tertiary"></i>
                   </div>
+
                   <p>Share Bill with Up to 3 Housemates</p>
                 </div>
               </li>
@@ -602,6 +610,7 @@
                   <div>
                     <i class="fa-solid fa-circle-check text-body-tertiary"></i>
                   </div>
+
                   <p>Minimum Guaranteed Savings</p>
                 </div>
               </li>
@@ -610,57 +619,62 @@
                   <div>
                     <i class="fa-solid fa-circle-check text-body-tertiary"></i>
                   </div>
+
                   <p>Customer Support via Phone</p>
                 </div>
               </li>
             </ul>
-            <a href="onboarding-form.html" class="btn btn-success w-100">
-              Upgrade to Super Saver
+            <a class="btn btn-success w-100" href="onboarding-form.html"
+              >Upgrade to Super Saver
             </a>
           </article>
 
           <article class="priceCard bg-body-secondary p-4 rounded-3 mb-3">
             <h5 class="mb-3">Saver Pro Plan</h5>
+
             <h3 class="mb-3">
               <small class="text-decoration-line-through text-body-tertiary"
-                >€30</small
-              ><strong class="text-success"> €25/month</strong>
+                >&euro;30</small
+              ><strong class="text-success"> &euro;25/month*</strong>
             </h3>
+
+            <p class="text-secondary">*Plus the cost of your bills</p>
 
             <ul class="list-group-flush p-1">
               <li class="list-group-item">
                 <div class="d-flex gap-2 align-content-center">
                   <div>
-                    <i class="fa-solid fa-circle-plus text-body-tertiary"></i>
+                    <i class="fa-solid fa-circle-check text-body-tertiary"></i>
                   </div>
+
                   <p><strong>All Super Saver Plan Benefits</strong></p>
                 </div>
               </li>
-
               <li class="list-group-item">
                 <div class="d-flex gap-2 align-content-center">
                   <div>
                     <i class="fa-solid fa-circle-check text-body-tertiary"></i>
                   </div>
+
                   <p>Manage up to <strong>8</strong> Utilities</p>
                 </div>
               </li>
-
               <li class="list-group-item">
                 <div class="d-flex gap-2 align-content-center">
                   <div>
                     <i class="fa-solid fa-circle-check text-body-tertiary"></i>
                   </div>
+
                   <p>Real-Time Bill Reviews (4x per month)</p>
                 </div>
               </li>
-
               <li class="list-group-item">
                 <div class="d-flex gap-2 align-content-center">
                   <div>
                     <i class="fa-solid fa-circle-check text-body-tertiary"></i>
                   </div>
-                  <p>Guaranteed Minimum Saving of €300</p>
+
+                  <p>Guaranteed Minimum Saving of &euro;300</p>
                 </div>
               </li>
               <li class="list-group-item">
@@ -668,6 +682,7 @@
                   <div>
                     <i class="fa-solid fa-circle-check text-body-tertiary"></i>
                   </div>
+
                   <p>Share Costs with Up to 5 Housemates</p>
                 </div>
               </li>
@@ -676,6 +691,7 @@
                   <div>
                     <i class="fa-solid fa-circle-check text-body-tertiary"></i>
                   </div>
+
                   <p>Customer Support via Personal Agent</p>
                 </div>
               </li>
@@ -684,12 +700,13 @@
                   <div>
                     <i class="fa-solid fa-circle-check text-body-tertiary"></i>
                   </div>
+
                   <p>AI-Powered Financial Insights</p>
                 </div>
               </li>
             </ul>
-            <a href="onboarding-form.html" class="btn btn-success w-100">
-              Unlock Premium Benefits
+            <a class="btn btn-success w-100" href="onboarding-form.html"
+              >Unlock Premium Benefits
             </a>
           </article>
         </div>
@@ -697,24 +714,26 @@
 
       <section class="bg-body-tertiary p-4 rounded-4 mb-4 mb-lg-5">
         <h2 class="text-center mb-4">Frequently Asked Questions</h2>
+
         <div class="accordion py-lg-4 mb-4 m-lg-0" id="accordionExample">
           <div class="accordion-item">
             <h2 class="accordion-header">
               <button
-                class="accordion-button collapsed"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#collapseOne"
-                aria-expanded="false"
                 aria-controls="collapseOne"
+                aria-expanded="false"
+                class="accordion-button collapsed"
+                data-bs-target="#collapseOne"
+                data-bs-toggle="collapse"
+                type="button"
               >
                 How long does it take to see savings?
               </button>
             </h2>
+
             <div
-              id="collapseOne"
               class="accordion-collapse collapse"
               data-bs-parent="#accordionExample"
+              id="collapseOne"
             >
               <div class="accordion-body">
                 While actual savings depend on your individual circumstances,
@@ -723,23 +742,25 @@
               </div>
             </div>
           </div>
+
           <div class="accordion-item">
             <h2 class="accordion-header">
               <button
-                class="accordion-button collapsed"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#collapseTwo"
-                aria-expanded="false"
                 aria-controls="collapseTwo"
+                aria-expanded="false"
+                class="accordion-button collapsed"
+                data-bs-target="#collapseTwo"
+                data-bs-toggle="collapse"
+                type="button"
               >
                 Is there a contract or long-term commitment?
               </button>
             </h2>
+
             <div
-              id="collapseTwo"
               class="accordion-collapse collapse"
               data-bs-parent="#accordionExample"
+              id="collapseTwo"
             >
               <div class="accordion-body">
                 No, we offer our services on a subscription basis, and you can
@@ -748,23 +769,25 @@
               </div>
             </div>
           </div>
+
           <div class="accordion-item">
             <h2 class="accordion-header">
               <button
-                class="accordion-button collapsed"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#collapseThree"
-                aria-expanded="false"
                 aria-controls="collapseThree"
+                aria-expanded="false"
+                class="accordion-button collapsed"
+                data-bs-target="#collapseThree"
+                data-bs-toggle="collapse"
+                type="button"
               >
                 Is my personal information safe?
               </button>
             </h2>
+
             <div
-              id="collapseThree"
               class="accordion-collapse collapse"
               data-bs-parent="#accordionExample"
+              id="collapseThree"
             >
               <div class="accordion-body">
                 Absolutely. We take your privacy seriously. Your information is
@@ -774,33 +797,32 @@
             </div>
           </div>
         </div>
-        <a href="faqs.html" class="btn btn-outline-success w-100">
-          Read More FAQs
+        <a class="btn btn-outline-success w-100" href="faqs.html"
+          >Read More FAQs
         </a>
       </section>
       <a
-        href="https://wa.me/353858007335"
         class="chat btn btn-outline-success text-success bg-light rounded-pill me-3 mb-3 p-2 px-3 shadow-sm position-fixed bottom-0 end-0"
+        href="https://wa.me/353858007335"
       >
         <strong
           ><i
             class="fa-brands fa-whatsapp text-success p-2 rounded-circle me-1"
-          ></i
-        ></strong>
-
-        Chat With Us
+          ></i></strong
+        >Chat With Us
       </a>
     </main>
+
     <footer class="bg-body-tertiary p-4 p-lg-5">
       <a href="index.html"
         ><img
-          src="images/onebill-logo.png"
           alt="OneBill Logo"
           class="img-fluid w-25 mb-2"
+          src="images/onebill-logo.png"
       /></a>
 
       <p class="text-secondary">
-        <small>© 2023, OneBill Utilities Ltd</small>
+        <small>&copy; 2023, OneBill Utilities Ltd</small>
       </p>
 
       <div class="d-flex gap-2">
@@ -834,43 +856,93 @@
 
       <div class="d-flex justify-content-between mb-4 mt-4 pe-lg-5">
         <div class="d-flex flex-column gap-2">
-          <a href="index.html" class="text-decoration-none text-success"
+          <a class="text-decoration-none text-success" href="index.html"
             >Home</a
           >
-          <a href="about-us.html" class="text-decoration-none text-success"
+          <a class="text-decoration-none text-success" href="about-us.html"
             >About Us</a
           >
-          <a href="how-it-works.html" class="text-decoration-none text-success"
+          <a class="text-decoration-none text-success" href="how-it-works.html"
             >How It Works</a
           >
-          <a href="faqs.html" class="text-decoration-none text-success">FAQs</a>
-          <a href="contact-us.html" class="text-decoration-none text-success"
+          <a class="text-decoration-none text-success" href="faqs.html">FAQs</a>
+          <a class="text-decoration-none text-success" href="contact-us.html"
             >Contact Us</a
           >
         </div>
+
         <div class="d-flex flex-column gap-2">
-          <a href="#" class="text-decoration-none text-secondary">
-            <small>Terms & Conditions</small>
+          <a class="text-decoration-none text-secondary" href="#"
+            ><small>Terms &amp; Conditions</small>
           </a>
-          <a href="#" class="text-decoration-none text-secondary">
+          <a class="text-decoration-none text-secondary" href="#">
             <small>Privacy Policy</small>
           </a>
-          <a href="#" class="text-decoration-none text-secondary">
+          <a class="text-decoration-none text-secondary" href="#">
             <small>Cookie Policy</small>
           </a>
         </div>
       </div>
+
       <p class="text-secondary">
-        <small>
-          OneBill Utilities Ltd is a registered company in Ireland.
+        <small
+          >OneBill Utilities Ltd is a registered company in Ireland.
         </small>
       </p>
 
-      <p class="text-secondary">
-        <small> CRO: 658186 </small>
-      </p>
-    </footer>
+      <p class="text-secondary"><small>CRO: 658186 </small></p>
 
+      <!-- Cookie Consent Modal -->
+      <div
+        class="modal fade"
+        data-bs-backdrop="static"
+        data-bs-keyboard="false"
+        id="cookieConsentModal"
+        tabindex="-1"
+        role="dialog"
+        aria-labelledby="cookieConsentModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="cookieConsentModalLabel">
+                Cookie Consent
+              </h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <p>
+                We use cookies to enhance your browsing experience and provide
+                personalized content. By clicking "Accept," you agree to the use
+                of cookies on our website. These cookies help us analyze site
+                traffic, understand user behavior, and improve our services. To
+                learn more about how we use cookies and your options, please
+                review our <a href="">Cookie Policy</a> .
+              </p>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-outline-success"
+                data-dismiss="modal"
+                id="rejectCookies"
+              >
+                Reject All
+              </button>
+              <button type="button" class="btn btn-success" id="acceptCookies">
+                Accept All
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
     <!-- Bootstrap JS Link -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
@@ -882,7 +954,6 @@
       integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
       crossorigin="anonymous"
     ></script>
-
-    <script src="index.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>
